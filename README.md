@@ -221,6 +221,26 @@ Demonstrates Claude as a dream interpretation assistant. Given a dream about wal
 
 ---
 
+### EfficiencyEstimator
+
+Step-by-step Big O time complexity analysis of a Python function with single and nested loops, concluding with O(n^2) overall complexity.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — Big O complexity analysis
+
+---
+
+### EmailExtractor
+
+Extracts email addresses from a phone directory text and lists them one per line.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — extracted email addresses
+
+---
+
 ### EmojiEncoder
 
 Shakespeare's "All the world's a stage" quote converted into an expressive emoji-rich message with key words replaced by relevant emojis.
