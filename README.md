@@ -30,6 +30,7 @@ claude-prompt-library/
 ├── PortmanteauPoet/        # Creative portmanteau word blending
 ├── ProsePolisher/          # Copyediting and prose improvement
 ├── PunDit/                 # Pun and wordplay generator
+├── SecondGradeSimplifier/  # Complex topics simplified for kids
 ├── SimileSavant/           # Creative similes for joyful laughter
 ├── SqlSorcerer/            # Natural language to SQL query
 ├── StorytellingSidekick/   # Collaborative storytelling with plot twists
@@ -277,6 +278,16 @@ Demonstrates Claude as a pun and wordplay generator. Given the topic "Fishing," 
 **Files:**
 - `prompt.md` — the system + user prompt
 - `puns.md` — the generated puns and wordplay
+
+---
+
+### SecondGradeSimplifier
+
+A simplified explanation of mitochondria and ATP rewritten for grades 3–5 readers using kid-friendly analogies.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `simplified-explanation.md` — mitochondria explained for kids with battery and power plant analogies
 
 ---
 
