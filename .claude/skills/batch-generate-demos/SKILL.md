@@ -1,11 +1,11 @@
 ---
 name: batch-generate-demos
-description: Batch-process multiple Anthropic Prompt Library URLs into demos for the claude-prompt-library repo. Accepts URLs as arguments or from a file. Generates all demos in parallel using sub-agents, then updates README.md and commits once. Use when adding multiple demos at once, e.g. "batch generate these demos", "add all these URLs", or when providing a list of prompt library URLs.
+description: Batch-process multiple Anthropic Prompt Library URLs into demos for the claude-prompt-library repo. Accepts URLs as arguments or from a file. Generates all demos in parallel using sub-agents, then commits each demo individually for clean git history. Use when adding multiple demos at once, e.g. "batch generate these demos", "add all these URLs", or when providing a list of prompt library URLs.
 ---
 
 # Batch Demo Generator
 
-Processes multiple Anthropic Prompt Library URLs in parallel, creating demo folders with `prompt.md` and generated output for each, then updating `README.md` and committing once.
+Processes multiple Anthropic Prompt Library URLs in parallel, creating demo folders with `prompt.md` and generated output for each, then committing each demo individually for clean git history.
 
 Repo path: `/Users/wangxin/Documents/claude/deep.learning.courses/claude-prompt-library`
 GitHub Pages root: `https://mikewangmax.github.io/claude-prompt-library/`
@@ -53,31 +53,45 @@ You are generating a demo for the claude-prompt-library repo.
 ## Instructions
 
 ### Step 1 — Fetch the prompt
-Use WebFetch on the URL. The page has a table with rows labeled "System" and "User".
-Extract the **System** prompt text and **User** prompt text. Some pages only have a User row (no System).
+Use WebFetch on the URL. The page has a table with rows labeled "System", "User", and sometimes "Assistant (Prefill)" or additional "User" turns.
+Extract **all** rows from the table (System, User, Assistant Prefill, etc.). Some pages only have a User row (no System).
 Ignore the "Example output" and "API request" sections entirely.
 
 ### Step 2 — Create prompt.md
 Write the file `<PascalCaseName>/prompt.md` at the repo path.
 
-Format when both System and User exist:
+Format — include ALL turns from the page table, in order, using **bold labels** with colons:
+
+For a simple System + User prompt:
 ```
-System
+**System:**
 <system prompt text verbatim>
 
-User
+**User:**
 <user prompt text verbatim>
 ```
 
-Format when only User exists:
+For multi-turn prompts (with Assistant Prefill and/or multiple User turns):
 ```
-<user prompt text verbatim>
+**System:**
+<system prompt text verbatim>
+
+**User:**
+<first user message verbatim>
+
+**Assistant (Prefill):**
+<assistant prefill text verbatim>
+
+**User:**
+<second user message verbatim>
 ```
+
+If only a User prompt (no System row), write the raw text with no labels.
 
 Do NOT paraphrase or trim the prompt text.
 
 ### Step 3 — Execute the prompt
-Now act as if you received the System prompt as your system instructions and the User prompt as the user's message. Generate the full output that Claude would produce.
+Use the System prompt as your system instructions. If there are prior User + Assistant turns, treat them as conversation context. Generate a response to the **final User message**.
 
 ### Step 4 — Choose output filename
 Pick a descriptive kebab-case filename:
@@ -105,15 +119,14 @@ If you encounter an error at any step, still output the block but with `"status"
 
 ---
 
-## Phase 3 — Update README & Commit
+## Phase 3 — Commit Each Demo Individually
 
-After all waves complete:
+After all waves complete, collect the successful results sorted alphabetically by `folderName`. Then **for each result**, perform these steps sequentially:
 
-### 3a. Update README.md
+### 3a. Update README.md for this demo
 
 1. Read the current `README.md`.
-2. Collect all successful results, sorted alphabetically by `folderName`.
-3. For each result, **insert a new entry** into the `## Demos` section in alphabetical order among existing entries. Use the template from `references/conventions.md`:
+2. **Insert a new entry** into the `## Demos` section in alphabetical order among existing entries. Use the template from `references/conventions.md`:
 
    For non-HTML output:
    ```markdown
@@ -142,25 +155,34 @@ After all waves complete:
    ---
    ```
 
-4. Update the `## Project Structure` tree block to include all new folders in alphabetical order. Use `├──` for all entries except the last which uses `└──`. Add a short `# comment` for each.
+3. Update the `## Project Structure` tree block to include the new folder in alphabetical order. Use `├──` for all entries except the last which uses `└──`. Add a short `# comment`.
 
-### 3b. Commit and push
+### 3b. Commit this demo
 
 ```bash
-git add <Folder1>/ <Folder2>/ ... README.md
+git add <FolderName>/ README.md
 git commit -m "$(cat <<'EOF'
-Add <N> demos: FolderA, FolderB, FolderC, ...
+Add <FolderName> demo
 
 Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
 EOF
 )"
+```
+
+Repeat steps 3a–3b for each successful demo before moving to the next.
+
+### 3c. Push and report
+
+After all individual commits are created, push once:
+
+```bash
 git push
 ```
 
-### 3c. Final report
+Then print the final report:
 
 ```
-Done! Added N demos successfully.
+Done! Added N demos (N individual commits).
 Failed: [list any failures, or "none"]
 ```
 

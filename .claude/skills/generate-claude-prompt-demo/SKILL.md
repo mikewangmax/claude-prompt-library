@@ -30,7 +30,7 @@ Convert the URL slug to PascalCase: split on `-`, capitalise each word, join.
 - `excel-formula-expert` → `ExcelFormulaExpert`
 
 **Step 2 — Fetch the prompt**
-Use WebFetch on the URL. Extract the **System** and **User** prompt text from the page table. Ignore the example output and API request sections.
+Use WebFetch on the URL. Extract **all** prompt rows from the page table — System, User, Assistant (Prefill), and any additional turns. Ignore the example output and API request sections.
 
 **Step 3 — Create `DemoName/prompt.md`**
 Write the prompts verbatim using the format in `references/conventions.md`. Do not paraphrase or trim.

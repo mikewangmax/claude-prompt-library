@@ -70,6 +70,24 @@ If the page has both System and User sections:
 <user prompt text>
 ```
 
+If the page has a multi-turn conversation (System, User, Assistant Prefill, and/or additional User turns):
+
+```
+**System:**
+<system prompt text>
+
+**User:**
+<first user message>
+
+**Assistant (Prefill):**
+<assistant prefill text>
+
+**User:**
+<second user message>
+```
+
+Include every turn from the table in order. Use **bold labels** matching the row headers on the page.
+
 If only a User prompt (no System row on the page), just write the raw text with no labels.
 
 ## URL Slug → Folder Name
