@@ -1,5 +1,5 @@
 ---
-name: claude-prompt-library
+name: generate-claude-prompt-demo
 description: Workflow skill for managing the claude-prompt-library showcase repo at /Users/wangxin/Documents/claude/deep.learning.courses/claude-prompt-library. Use when the user provides an Anthropic Prompt Library URL to add as a new demo, or when adding demos, generating Claude outputs, updating the README, publishing to GitHub Pages, or any repo housekeeping. Triggers on tasks like "add this demo [url]", "add a new demo", "generate output for this prompt", "update the README", "commit and push", "consolidate settings", or "maintain the repo structure".
 ---
 
