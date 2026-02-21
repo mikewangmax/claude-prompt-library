@@ -37,9 +37,9 @@ When `--file` is the first argument, read the specified file (one URL per line, 
 
 ## Phase 2 — Parallel Content Generation
 
-Process URLs in **waves of up to 5 concurrent sub-agents**. For each wave:
+Process URLs in **waves of up to 10 concurrent sub-agents**. For each wave:
 
-1. Take the next batch of up to 5 URLs from the queue.
+1. Take the next batch of up to 10 URLs from the queue.
 2. Launch one `Task` tool call per URL **in a single message** (this makes them run in parallel). Use `subagent_type: "general-purpose"`.
 3. Each sub-agent receives this prompt (fill in the `<placeholders>`):
 
