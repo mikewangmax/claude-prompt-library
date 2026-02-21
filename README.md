@@ -8,6 +8,7 @@ Hands-on demos built from prompts in the [Anthropic Claude Prompt Library](https
 claude-prompt-library/
 ├── CosmicKeystrokes/       # Side-scrolling typing game (HTML)
 ├── AdaptiveEditor/         # Style-adapted text rewriting
+├── AirportCodeAnalyst/     # IATA airport code extraction
 ├── CodeConsultant/         # Python performance optimization analysis
 ├── CsvConverter/            # JSON to CSV data conversion
 ├── CulinaryCreator/        # Personalized gluten-free recipe ideas
@@ -49,6 +50,16 @@ A pirate-style rewrite of a paragraph about Carl Linnaeus and his binomial nomen
 **Files:**
 - `prompt.md` — the user prompt
 - `output.md` — pirate-style rewrite of a scientific paragraph
+
+---
+
+### AirportCodeAnalyst
+
+Identifies and lists IATA airport codes (SEA, AMS, CDG, FCO) extracted from a travel itinerary text.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — extracted airport codes from travel text
 
 ---
 
