@@ -9,6 +9,7 @@ claude-prompt-library/
 ├── CosmicKeystrokes/       # Side-scrolling typing game (HTML)
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
+├── StorytellingSidekick/   # Collaborative storytelling with plot twists
 └── WebsiteWizard/          # One-page website generator (HTML)
 ```
 
@@ -42,6 +43,16 @@ A Google Apps Script that iterates over every slide and text element in a Google
 **Files:**
 - `prompt.md` — the user prompt
 - `translateToKorean.gs` — the generated Apps Script (paste into Google Apps Script editor)
+
+---
+
+### StorytellingSidekick
+
+Demonstrates Claude as a collaborative storytelling partner. Given a premise about a young woman named Lila who discovers she can control the weather, Claude builds an engaging multi-chapter narrative with vivid characters, plot twists, and interactive story direction options for the reader to shape what happens next.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `story.md` — the generated collaborative story
 
 ---
 
