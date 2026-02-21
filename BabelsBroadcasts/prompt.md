@@ -1,0 +1,1 @@
+Write me a series of product announcement tweets in the 10 most commonly spoken languages. The product is a new state of the art pair of binoculars with built-in AI systems to identify the animals viewed through the binoculars. The tweets should be exciting, cutting edge, and push consumer interest.

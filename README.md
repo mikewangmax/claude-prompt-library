@@ -11,33 +11,58 @@ claude-prompt-library/
 ├── AirportCodeAnalyst/     # IATA airport code extraction
 ├── AlienAnthropologist/    # Alien field report on human behavior
 ├── AlliterationAlchemist/  # Alliterative phrase generation
+├── BabelsBroadcasts/       # Multilingual product announcements
+├── BrandBuilder/           # Brand identity design brief
+├── CareerCoach/            # AI career transition roadmap
+├── CodeClarifier/          # Plain-language code explanation
 ├── CodeConsultant/         # Python performance optimization analysis
 ├── CsvConverter/            # JSON to CSV data conversion
+├── DataOrganizer/          # Unstructured text to JSON
+├── DirectionDecoder/       # Natural language to step-by-step directions
 ├── CulinaryCreator/        # Personalized gluten-free recipe ideas
 ├── DreamInterpreter/       # Dream symbolism analysis
+├── EfficiencyEstimator/    # Big O complexity analysis
+├── EmailExtractor/         # Email address extraction from text
 ├── EmojiEncoder/           # Text-to-emoji message encoding
 ├── EthicalDilemmaNavigator/ # Multi-framework ethical dilemma analysis
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
 ├── FunctionFabricator/     # Python Sudoku solver
-├── GitGud/                 # Git commands guide for saving changes
+├── FuturisticFashionAdvisor/ # Avant-garde outfit suggestions
+├── GitGud/
+├── GradingGuru/            # Text quality evaluation
+├── GrammarGenie/           # Grammar correction                 # Git commands guide for saving changes
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
 ├── HalTheHumorousHelper/   # Sarcastic yet helpful AI assistant
 ├── IdiomIlluminator/       # Idiom meaning and origin explanation
+├── InterviewQuestionCrafter/ # Interview question generation       # Idiom meaning and origin explanation
 ├── LatexLegend/            # LaTeX table creation guide
+├── LessonPlanner/          # Comprehensive lesson plan creation
+├── MasterModerator/        # Content moderation classifier
 ├── MeetingScribe/          # Meeting notes to structured summary
 ├── MemoMaestro/            # Professional company memo drafting
 ├── MindfulnessMentor/      # Guided mindfulness meditation
 ├── MoodColorizer/          # Mood-to-color converter (HTML)
+├── MotivationalMuse/       # Personalized motivational messages          # Mood-to-color converter (HTML)
 ├── NeologismCreator/       # Creative neologism invention
 ├── PerspectivesPonderer/   # Multi-perspective analysis
+├── PhilosophicalMusings/   # Philosophical discussion and analysis
 ├── PiiPurifier/            # PII redaction from text
+├── PolyglotSuperpowers/    # Multilingual translation            # PII redaction from text
 ├── PortmanteauPoet/        # Creative portmanteau word blending
+├── ProductNamingPro/       # Creative product name suggestions
 ├── ProsePolisher/          # Copyediting and prose improvement
 ├── PunDit/                 # Pun and wordplay generator
+├── ReviewClassifier/       # Feedback categorization with sentiment
+├── RiddleMeThis/           # Creative riddle generation
+├── SciFiScenarioSimulator/ # Sci-fi scenario exploration
 ├── SecondGradeSimplifier/  # Complex topics simplified for kids
 ├── SimileSavant/           # Creative similes for joyful laughter
+├── SocraticSage/           # Socratic dialogue and questioning
+├── SpreadsheetSorcerer/    # CSV spreadsheet data generation
 ├── SqlSorcerer/            # Natural language to SQL query
+├── TongueTwister/          # Creative tongue twister collection
 ├── TriviaGenerator/        # Trivia questions with progressive hints
+├── TweetToneDetector/      # Tweet tone and sentiment analysis
 ├── StorytellingSidekick/   # Collaborative storytelling with plot twists
 ├── VrFitnessInnovator/     # VR fitness game concepts
 └── WebsiteWizard/          # One-page website generator (HTML)
@@ -82,6 +107,46 @@ Identifies and lists IATA airport codes (SEA, AMS, CDG, FCO) extracted from a tr
 **Files:**
 - `prompt.md` — the system + user prompt
 - `output.md` — extracted airport codes from travel text
+
+---
+
+### BabelsBroadcasts
+
+Product announcement tweets for AI-powered binoculars in the 10 most commonly spoken languages.
+
+**Files:**
+- `prompt.md` — the user prompt
+- `output.md` — multilingual product announcement tweets
+
+---
+
+### BrandBuilder
+
+A comprehensive holistic brand identity design brief for an eco-friendly fashion brand called Verdana Collective, covering name, logo, colors, typography, visual style, tone of voice, and brand personality.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `brand-identity-brief.md` — complete brand identity design brief
+
+---
+
+### CareerCoach
+
+AI career coach provides a comprehensive roadmap for transitioning into an AI career, covering skill assessment, learning paths, career options, practical experience, networking, and a realistic timeline.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — AI career transition roadmap and advice
+
+---
+
+### CodeClarifier
+
+A plain-language explanation of a Python bubble sort code snippet, broken into digestible parts with analogies and a summary table.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — beginner-friendly code explanation with analogies
 
 ---
 
