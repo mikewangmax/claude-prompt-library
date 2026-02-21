@@ -12,6 +12,7 @@ claude-prompt-library/
 ├── DreamInterpreter/       # Dream symbolism analysis
 ├── EthicalDilemmaNavigator/ # Multi-framework ethical dilemma analysis
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
+├── FunctionFabricator/     # Python Sudoku solver
 ├── GitGud/                 # Git commands guide for saving changes
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
 ├── HalTheHumorousHelper/   # Sarcastic yet helpful AI assistant
@@ -95,6 +96,16 @@ A sarcastic yet helpful cooking advice response from Hal, featuring tiered meal 
 **Files:**
 - `prompt.md` — the system + user prompt
 - `hal-cooking-advice.md` — Hal's sarcastic cooking advice with tiered meal suggestions
+
+---
+
+### FunctionFabricator
+
+A Python Sudoku solver using backtracking with input validation, edge case handling, and comprehensive documentation.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `sudoku-solver.py` — Python Sudoku solver with backtracking algorithm
 
 ---
 
