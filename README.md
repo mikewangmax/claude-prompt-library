@@ -7,6 +7,7 @@ Hands-on demos built from prompts in the [Anthropic Claude Prompt Library](https
 ```
 claude-prompt-library/
 ├── CosmicKeystrokes/       # Side-scrolling typing game (HTML)
+├── CulinaryCreator/        # Personalized gluten-free recipe ideas
 ├── DreamInterpreter/       # Dream symbolism analysis
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
@@ -26,6 +27,16 @@ A fully self-contained side-scrolling typing game in a single HTML file. The pla
 - `prompt.md` — the user prompt sent to Claude
 - [`typing-game.html`](CosmicKeystrokes/typing-game.html) — the generated game, open directly in a browser
 - **Live demo:** https://mikewangmax.github.io/claude-prompt-library/CosmicKeystrokes/typing-game.html
+
+---
+
+### CulinaryCreator
+
+Demonstrates Claude as a personalized recipe generator. Given a list of available ingredients (chicken breast, broccoli, carrots, onion, garlic, olive oil, rice, gluten-free soy sauce, honey) and a gluten-free dietary preference, Claude suggests three complete recipes — a honey garlic stir-fry, a one-pan rice bake, and fried rice — each with ingredient lists, step-by-step instructions, and practical tips.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `recipes.md` — the generated recipes
 
 ---
 
