@@ -11,6 +11,7 @@ claude-prompt-library/
 ├── DreamInterpreter/       # Dream symbolism analysis
 ├── EthicalDilemmaNavigator/ # Multi-framework ethical dilemma analysis
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
+├── GitGud/                 # Git commands guide for saving changes
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
 ├── HalTheHumorousHelper/   # Sarcastic yet helpful AI assistant
 ├── LatexLegend/            # LaTeX table creation guide
@@ -82,6 +83,16 @@ A sarcastic yet helpful cooking advice response from Hal, featuring tiered meal 
 **Files:**
 - `prompt.md` — the system + user prompt
 - `hal-cooking-advice.md` — Hal's sarcastic cooking advice with tiered meal suggestions
+
+---
+
+### GitGud
+
+A comprehensive guide explaining Git commands for saving local changes, covering git add, git commit, useful variations, and recommended workflow practices.
+
+**Files:**
+- `prompt.md` — the user prompt
+- `git-save-changes.md` — guide to saving changes with Git
 
 ---
 
