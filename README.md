@@ -8,6 +8,7 @@ Hands-on demos built from prompts in the [Anthropic Claude Prompt Library](https
 claude-prompt-library/
 ├── CosmicKeystrokes/       # Side-scrolling typing game (HTML)
 ├── CodeConsultant/         # Python performance optimization analysis
+├── CsvConverter/            # JSON to CSV data conversion
 ├── CulinaryCreator/        # Personalized gluten-free recipe ideas
 ├── DreamInterpreter/       # Dream symbolism analysis
 ├── EthicalDilemmaNavigator/ # Multi-framework ethical dilemma analysis
@@ -49,6 +50,16 @@ A fully self-contained side-scrolling typing game in a single HTML file. The pla
 - `prompt.md` — the user prompt sent to Claude
 - [`typing-game.html`](CosmicKeystrokes/typing-game.html) — the generated game, open directly in a browser
 - **Live demo:** https://mikewangmax.github.io/claude-prompt-library/CosmicKeystrokes/typing-game.html
+
+---
+
+### CsvConverter
+
+Converts a JSON array of contact records into a semicolon-delimited CSV with double-quoted values, plus saving and import instructions.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `json-to-csv-conversion.md` — JSON to semicolon-delimited CSV conversion with instructions
 
 ---
 
