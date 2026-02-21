@@ -10,6 +10,7 @@ claude-prompt-library/
 ├── DreamInterpreter/       # Dream symbolism analysis
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
+├── PunDit/                 # Pun and wordplay generator
 ├── SqlSorcerer/            # Natural language to SQL query
 ├── StorytellingSidekick/   # Collaborative storytelling with plot twists
 └── WebsiteWizard/          # One-page website generator (HTML)
@@ -55,6 +56,16 @@ A Google Apps Script that iterates over every slide and text element in a Google
 **Files:**
 - `prompt.md` — the user prompt
 - `translateToKorean.gs` — the generated Apps Script (paste into Google Apps Script editor)
+
+---
+
+### PunDit
+
+Demonstrates Claude as a pun and wordplay generator. Given the topic "Fishing," Claude produces a categorized collection of original fish-themed puns, plays on words, and humorous phrases — from "reel talk" to "o-fish-ally on vacation" — organized into themed sections with witty commentary.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `puns.md` — the generated puns and wordplay
 
 ---
 
