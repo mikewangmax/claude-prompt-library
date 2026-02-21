@@ -11,6 +11,7 @@ claude-prompt-library/
 ├── DreamInterpreter/       # Dream symbolism analysis
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
+├── PortmanteauPoet/        # Creative portmanteau word blending
 ├── PunDit/                 # Pun and wordplay generator
 ├── SqlSorcerer/            # Natural language to SQL query
 ├── StorytellingSidekick/   # Collaborative storytelling with plot twists
@@ -67,6 +68,16 @@ A Google Apps Script that iterates over every slide and text element in a Google
 **Files:**
 - `prompt.md` — the user prompt
 - `translateToKorean.gs` — the generated Apps Script (paste into Google Apps Script editor)
+
+---
+
+### PortmanteauPoet
+
+Demonstrates Claude as a creative portmanteau generator. Given the words "music" and "therapy," Claude produces a curated collection of innovative word blends — from "Musitherapy" to "Rhythmedy" — each with pronunciation guides, etymological breakdowns, and context suggestions for when to use them.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `portmanteaus.md` — the generated portmanteau options
 
 ---
 

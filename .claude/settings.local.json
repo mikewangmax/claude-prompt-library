@@ -14,7 +14,9 @@
       "Bash(CLAUDECODE= claude skills:*)",
       "Bash(CLAUDECODE= claude skill:*)",
       "Bash(claude skill:*)",
-      "Bash(unzip:*)"
+      "Bash(unzip:*)",
+      "Bash(ls:*)",
+      "Bash(ln:*)"
     ]
   }
 }
