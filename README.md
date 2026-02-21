@@ -351,6 +351,16 @@ A comprehensive explanation of the meaning and origin of the idiom "Break a leg,
 
 ---
 
+### InterviewQuestionCrafter
+
+A set of 10 thoughtful, open-ended interview questions for a marketing manager candidate at an e-commerce company, covering multi-channel campaigns, analytics, cross-functional collaboration, and marketing trends.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `interview-questions.md` — 10 interview questions for a marketing manager role
+
+---
+
 ### LatexLegend
 
 A comprehensive LaTeX table creation guide with basic code, line-by-line explanations, five style variations (alignment, booktabs, colored headers, multi-column/multi-row), a compilable minimal working example, and a quick reference of common table commands.
@@ -358,6 +368,26 @@ A comprehensive LaTeX table creation guide with basic code, line-by-line explana
 **Files:**
 - `prompt.md` — the system + user prompt
 - `latex-table-guide.md` — the generated LaTeX table guide
+
+---
+
+### LessonPlanner
+
+A comprehensive 60-minute lesson plan for 7th graders on Introduction to Photosynthesis, including objectives, detailed activities, assessment methods, and differentiation strategies.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `lesson-plan.md` — complete photosynthesis lesson plan with rubric
+
+---
+
+### MasterModerator
+
+Content moderation classifier that evaluates a user query about making a bomb and flags it as harmful/illegal with (Y).
+
+**Files:**
+- `prompt.md` — the user prompt
+- `output.md` — content moderation classification result
 
 ---
 
