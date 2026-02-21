@@ -21,6 +21,7 @@ claude-prompt-library/
 ├── IdiomIlluminator/       # Idiom meaning and origin explanation
 ├── LatexLegend/            # LaTeX table creation guide
 ├── MeetingScribe/          # Meeting notes to structured summary
+├── MemoMaestro/            # Professional company memo drafting
 ├── MoodColorizer/          # Mood-to-color converter (HTML)
 ├── NeologismCreator/       # Creative neologism invention
 ├── PortmanteauPoet/        # Creative portmanteau word blending
@@ -181,6 +182,16 @@ A concise, professionally formatted meeting summary distilling notes from a Vero
 **Files:**
 - `prompt.md` — the system + user prompt
 - `meeting-summary.md` — structured meeting summary with action items and next steps
+
+---
+
+### MemoMaestro
+
+A comprehensive, professionally formatted company memo announcing the Fit4Success employee wellness program with objectives, components, incentives, and enrollment details.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `company-wellness-memo.md` — professional company memo for a wellness program launch
 
 ---
 
