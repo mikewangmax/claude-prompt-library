@@ -11,6 +11,7 @@ claude-prompt-library/
 ├── CsvConverter/            # JSON to CSV data conversion
 ├── CulinaryCreator/        # Personalized gluten-free recipe ideas
 ├── DreamInterpreter/       # Dream symbolism analysis
+├── EmojiEncoder/           # Text-to-emoji message encoding
 ├── EthicalDilemmaNavigator/ # Multi-framework ethical dilemma analysis
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
 ├── FunctionFabricator/     # Python Sudoku solver
@@ -80,6 +81,16 @@ Demonstrates Claude as a dream interpretation assistant. Given a dream about wal
 **Files:**
 - `prompt.md` — the system + user prompt
 - `interpretation.md` — the generated dream analysis
+
+---
+
+### EmojiEncoder
+
+Shakespeare's "All the world's a stage" quote converted into an expressive emoji-rich message with key words replaced by relevant emojis.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `emoji-encoded-message.md` — emoji-encoded Shakespeare quote
 
 ---
 
