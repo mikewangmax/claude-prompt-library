@@ -18,6 +18,7 @@ claude-prompt-library/
 ├── MoodColorizer/          # Mood-to-color converter (HTML)
 ├── PortmanteauPoet/        # Creative portmanteau word blending
 ├── PunDit/                 # Pun and wordplay generator
+├── SimileSavant/           # Creative similes for joyful laughter
 ├── SqlSorcerer/            # Natural language to SQL query
 ├── StorytellingSidekick/   # Collaborative storytelling with plot twists
 └── WebsiteWizard/          # One-page website generator (HTML)
@@ -144,6 +145,16 @@ Demonstrates Claude as a pun and wordplay generator. Given the topic "Fishing," 
 **Files:**
 - `prompt.md` — the system + user prompt
 - `puns.md` — the generated puns and wordplay
+
+---
+
+### SimileSavant
+
+A collection of 15 vivid similes describing joyful and contagious laughter, using imagery like silver bells, champagne, popcorn, and carnival drums.
+
+**Files:**
+- `prompt.md` — the user prompt
+- `joyful-laughter-similes.md` — creative similes for contagious laughter
 
 ---
 
