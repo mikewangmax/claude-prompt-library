@@ -21,6 +21,7 @@ A fully self-contained side-scrolling typing game in a single HTML file. The pla
 **Files:**
 - `prompt.md` — the user prompt sent to Claude
 - [`typing-game.html`](CosmicKeystrokes/typing-game.html) — the generated game, open directly in a browser
+- **Live demo:** https://mikewangmax.github.io/claude-prompt-library/CosmicKeystrokes/typing-game.html
 
 ---
 
@@ -51,11 +52,12 @@ A one-page website for a fictional online learning platform called **EduQuest**,
 **Files:**
 - `prompt.md` — the system + user prompt
 - [`eduquest.html`](WebsiteWizard/eduquest.html) — the generated website, open directly in a browser
+- **Live demo:** https://mikewangmax.github.io/claude-prompt-library/WebsiteWizard/eduquest.html
 
 ## How to Use
 
 1. Browse a folder to see the prompt that was used.
-2. Open `.html` files directly in a browser to run the web demos.
+2. Open `.html` files directly in a browser, or use the **Live demo** links above to run the web demos online.
 3. Paste `.gs` files into the [Google Apps Script editor](https://script.google.com) to run the script demo.
 4. Reference `formula.md` for the Excel formula and copy it into your spreadsheet.
 
