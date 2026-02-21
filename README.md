@@ -191,6 +191,26 @@ Demonstrates Claude as a personalized recipe generator. Given a list of availabl
 
 ---
 
+### DataOrganizer
+
+Converts unstructured text about notable residents into a structured JSON array with fields for name, age, profession, education, accomplishments, and village.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.json` — structured JSON data from unstructured text
+
+---
+
+### DirectionDecoder
+
+Step-by-step directions for making a cup of tea, transformed from a natural language description into clear, sequential, imperative instructions.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — step-by-step directions extracted from prose
+
+---
+
 ### DreamInterpreter
 
 Demonstrates Claude as a dream interpretation assistant. Given a dream about walking through a dark forest, encountering a white stag that transforms into a wise old man, and receiving a golden key, Claude provides a detailed symbol-by-symbol analysis drawing on Jungian archetypes, mythological traditions, and narrative structure — with reflective questions for the dreamer.
