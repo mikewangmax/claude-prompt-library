@@ -291,6 +291,16 @@ A Python Sudoku solver using backtracking with input validation, edge case handl
 
 ---
 
+### FuturisticFashionAdvisor
+
+Avant-garde fashion advisory with four detailed outfit suggestions for an art gallery opening, tailored to an edgy, minimal, androgynous style in black, white, and deep red.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `fashion-advisory.md` — four futuristic outfit concepts for an art gallery opening
+
+---
+
 ### GitGud
 
 A comprehensive guide explaining Git commands for saving local changes, covering git add, git commit, useful variations, and recommended workflow practices.
@@ -298,6 +308,26 @@ A comprehensive guide explaining Git commands for saving local changes, covering
 **Files:**
 - `prompt.md` — the user prompt
 - `git-save-changes.md` — guide to saving changes with Git
+
+---
+
+### GradingGuru
+
+A detailed evaluation comparing two texts on descriptive language, sentence structure, emotional impact, and grammar with ratings and a comparative summary table.
+
+**Files:**
+- `prompt.md` — the user prompt
+- `output.md` — comparative text evaluation with ratings
+
+---
+
+### GrammarGenie
+
+Rewrites the grammatically incorrect internet-slang sentence "I can haz cheeseburger?" into clear, proper English.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — grammar-corrected sentence
 
 ---
 
