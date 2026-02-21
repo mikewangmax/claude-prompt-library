@@ -35,6 +35,7 @@ claude-prompt-library/
 ├── SqlSorcerer/            # Natural language to SQL query
 ├── TriviaGenerator/        # Trivia questions with progressive hints
 ├── StorytellingSidekick/   # Collaborative storytelling with plot twists
+├── VrFitnessInnovator/     # VR fitness game concepts
 └── WebsiteWizard/          # One-page website generator (HTML)
 ```
 
@@ -329,6 +330,16 @@ Demonstrates Claude as a collaborative storytelling partner. Given a premise abo
 **Files:**
 - `prompt.md` — the system + user prompt
 - `story.md` — the generated collaborative story
+
+---
+
+### VrFitnessInnovator
+
+A list of 12 innovative VR fitness game concepts spanning diverse genres, each with descriptions, key features, and fitness benefits.
+
+**Files:**
+- `prompt.md` — the user prompt
+- `vr-fitness-game-ideas.md` — 12 VR fitness game concepts with features and fitness aspects
 
 ---
 
