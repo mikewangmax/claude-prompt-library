@@ -26,6 +26,7 @@ claude-prompt-library/
 ├── MoodColorizer/          # Mood-to-color converter (HTML)
 ├── NeologismCreator/       # Creative neologism invention
 ├── PerspectivesPonderer/   # Multi-perspective analysis
+├── PiiPurifier/            # PII redaction from text
 ├── PortmanteauPoet/        # Creative portmanteau word blending
 ├── PunDit/                 # Pun and wordplay generator
 ├── SimileSavant/           # Creative similes for joyful laughter
@@ -235,6 +236,16 @@ A comprehensive pros-and-cons analysis of implementing a four-day workweek as a 
 **Files:**
 - `prompt.md` — the user prompt
 - `four-day-workweek-analysis.md` — multi-perspective analysis of the four-day workweek
+
+---
+
+### PiiPurifier
+
+A redacted version of a conversation where all personally identifiable information (names and address) has been replaced with XXX.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `redacted-conversation.md` — PII-redacted conversation text
 
 ---
 
