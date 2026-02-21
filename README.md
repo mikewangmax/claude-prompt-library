@@ -532,6 +532,36 @@ Demonstrates Claude as a pun and wordplay generator. Given the topic "Fishing," 
 
 ---
 
+### ReviewClassifier
+
+Categorizes user feedback about an email marketing platform into predefined categories with sentiment analysis for each.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — feedback categorization with sentiment labels
+
+---
+
+### RiddleMeThis
+
+A clever riddle about a map with progressive hints guiding the solver through logical deduction to the answer.
+
+**Files:**
+- `prompt.md` — the user prompt
+- `output.md` — original riddle with hints and explanation
+
+---
+
+### SciFiScenarioSimulator
+
+A detailed exploration of the sci-fi scenario of consciousness uploading, covering technological hurdles, the identity problem, ethical dimensions, social transformations, and quality of digital existence.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — consciousness uploading scenario exploration
+
+---
+
 ### SecondGradeSimplifier
 
 A simplified explanation of mitochondria and ATP rewritten for grades 3–5 readers using kid-friendly analogies.
