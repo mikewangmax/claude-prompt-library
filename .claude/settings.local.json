@@ -8,7 +8,13 @@
       "Bash(git push:*)",
       "Bash(python3:*)",
       "Bash(git:*)",
-      "Bash(brew list:*)"
+      "Bash(brew list:*)",
+      "Bash(pip3 install:*)",
+      "Bash(claude skills:*)",
+      "Bash(CLAUDECODE= claude skills:*)",
+      "Bash(CLAUDECODE= claude skill:*)",
+      "Bash(claude skill:*)",
+      "Bash(unzip:*)"
     ]
   }
 }
