@@ -28,6 +28,7 @@ claude-prompt-library/
 ├── PerspectivesPonderer/   # Multi-perspective analysis
 ├── PiiPurifier/            # PII redaction from text
 ├── PortmanteauPoet/        # Creative portmanteau word blending
+├── ProsePolisher/          # Copyediting and prose improvement
 ├── PunDit/                 # Pun and wordplay generator
 ├── SimileSavant/           # Creative similes for joyful laughter
 ├── SqlSorcerer/            # Natural language to SQL query
@@ -256,6 +257,16 @@ Demonstrates Claude as a creative portmanteau generator. Given the words "music"
 **Files:**
 - `prompt.md` — the system + user prompt
 - `portmanteaus.md` — the generated portmanteau options
+
+---
+
+### ProsePolisher
+
+A detailed copyediting analysis of a short narrative passage about Jane's walk in nature, with specific suggestions for grammar, word choice, tone, and flow, plus a fully rewritten version.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `prose-polishing-analysis.md` — copyediting analysis with rewritten prose
 
 ---
 
