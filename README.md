@@ -7,6 +7,7 @@ Hands-on demos built from prompts in the [Anthropic Claude Prompt Library](https
 ```
 claude-prompt-library/
 ├── CosmicKeystrokes/       # Side-scrolling typing game (HTML)
+├── AdaptiveEditor/         # Style-adapted text rewriting
 ├── CodeConsultant/         # Python performance optimization analysis
 ├── CsvConverter/            # JSON to CSV data conversion
 ├── CulinaryCreator/        # Personalized gluten-free recipe ideas
@@ -40,6 +41,16 @@ claude-prompt-library/
 ```
 
 ## Demos
+
+### AdaptiveEditor
+
+A pirate-style rewrite of a paragraph about Carl Linnaeus and his binomial nomenclature system from Systema Naturae.
+
+**Files:**
+- `prompt.md` — the user prompt
+- `output.md` — pirate-style rewrite of a scientific paragraph
+
+---
 
 ### CodeConsultant
 
