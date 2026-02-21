@@ -22,6 +22,7 @@ claude-prompt-library/
 ├── LatexLegend/            # LaTeX table creation guide
 ├── MeetingScribe/          # Meeting notes to structured summary
 ├── MemoMaestro/            # Professional company memo drafting
+├── MindfulnessMentor/      # Guided mindfulness meditation
 ├── MoodColorizer/          # Mood-to-color converter (HTML)
 ├── NeologismCreator/       # Creative neologism invention
 ├── PortmanteauPoet/        # Creative portmanteau word blending
@@ -192,6 +193,16 @@ A comprehensive, professionally formatted company memo announcing the Fit4Succes
 **Files:**
 - `prompt.md` — the system + user prompt
 - `company-wellness-memo.md` — professional company memo for a wellness program launch
+
+---
+
+### MindfulnessMentor
+
+A comprehensive guided mindfulness meditation practice with breath awareness, body scan, tips for sustainability, and a quick stress reset technique.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `mindfulness-meditation-guide.md` — guided meditation with breath awareness and body scan
 
 ---
 
