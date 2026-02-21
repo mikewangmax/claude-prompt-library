@@ -9,6 +9,7 @@ claude-prompt-library/
 ├── CosmicKeystrokes/       # Side-scrolling typing game (HTML)
 ├── CulinaryCreator/        # Personalized gluten-free recipe ideas
 ├── DreamInterpreter/       # Dream symbolism analysis
+├── EthicalDilemmaNavigator/ # Multi-framework ethical dilemma analysis
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
 ├── HalTheHumorousHelper/   # Sarcastic yet helpful AI assistant
@@ -51,6 +52,16 @@ Demonstrates Claude as a dream interpretation assistant. Given a dream about wal
 **Files:**
 - `prompt.md` — the system + user prompt
 - `interpretation.md` — the generated dream analysis
+
+---
+
+### EthicalDilemmaNavigator
+
+A comprehensive multi-framework ethical analysis of a journalist's dilemma about publishing a government corruption story versus accepting a bribe.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `ethical-dilemma-analysis.md` — multi-framework ethical analysis with consequence mapping and reflective questions
 
 ---
 
