@@ -582,6 +582,26 @@ A collection of 15 vivid similes describing joyful and contagious laughter, usin
 
 ---
 
+### SocraticSage
+
+A Socratic-style philosophical dialogue opener that poses six probing questions to critically examine the ethics of animal testing.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — Socratic questioning on animal testing ethics
+
+---
+
+### SpreadsheetSorcerer
+
+A CSV spreadsheet of 20 library books with diverse genres, authors, publication years (1813–2021), and varying available copies.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `library_books.csv` — CSV spreadsheet of library book data
+
+---
+
 ### SqlSorcerer
 
 Demonstrates Claude transforming a natural language request into a valid SQL query. Given a multi-table e-commerce database schema (Customers, Products, Orders, Order_Items, Reviews, Employees), Claude generates a query to find customers who have placed orders but never left a review, along with their total spend — complete with a step-by-step explanation of each clause.
@@ -592,6 +612,16 @@ Demonstrates Claude transforming a natural language request into a valid SQL que
 
 ---
 
+### TongueTwister
+
+A collection of ten creative tongue twisters organized by difficulty level, featuring alliteration, wordplay, and humor.
+
+**Files:**
+- `prompt.md` — the user prompt
+- `output.md` — ten tongue twisters by difficulty
+
+---
+
 ### TriviaGenerator
 
 A collection of 10 challenging trivia questions across diverse categories with three progressive hints each.
@@ -599,6 +629,16 @@ A collection of 10 challenging trivia questions across diverse categories with t
 **Files:**
 - `prompt.md` — the user prompt
 - `trivia-questions.md` — 10 trivia questions with progressive hints and answers
+
+---
+
+### TweetToneDetector
+
+Analyzes a sarcastic tweet about a company's crisis handling, identifying sarcastic tone and negative sentiment with a detailed explanation of key linguistic and contextual cues.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — tweet tone and sentiment analysis
 
 ---
 
