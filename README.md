@@ -16,6 +16,7 @@ claude-prompt-library/
 ├── GitGud/                 # Git commands guide for saving changes
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
 ├── HalTheHumorousHelper/   # Sarcastic yet helpful AI assistant
+├── IdiomIlluminator/       # Idiom meaning and origin explanation
 ├── LatexLegend/            # LaTeX table creation guide
 ├── MoodColorizer/          # Mood-to-color converter (HTML)
 ├── PortmanteauPoet/        # Creative portmanteau word blending
@@ -126,6 +127,16 @@ A Google Apps Script that iterates over every slide and text element in a Google
 **Files:**
 - `prompt.md` — the user prompt
 - `translateToKorean.gs` — the generated Apps Script (paste into Google Apps Script editor)
+
+---
+
+### IdiomIlluminator
+
+A comprehensive explanation of the meaning and origin of the idiom "Break a leg," covering six historical theories and cross-cultural parallels.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `idiom-explanation.md` — meaning, origin theories, and cross-cultural parallels for "Break a leg"
 
 ---
 
