@@ -33,6 +33,7 @@ claude-prompt-library/
 ├── SecondGradeSimplifier/  # Complex topics simplified for kids
 ├── SimileSavant/           # Creative similes for joyful laughter
 ├── SqlSorcerer/            # Natural language to SQL query
+├── TriviaGenerator/        # Trivia questions with progressive hints
 ├── StorytellingSidekick/   # Collaborative storytelling with plot twists
 └── WebsiteWizard/          # One-page website generator (HTML)
 ```
@@ -308,6 +309,16 @@ Demonstrates Claude transforming a natural language request into a valid SQL que
 **Files:**
 - `prompt.md` — the system + user prompt
 - `query.md` — the generated SQL query and explanation
+
+---
+
+### TriviaGenerator
+
+A collection of 10 challenging trivia questions across diverse categories with three progressive hints each.
+
+**Files:**
+- `prompt.md` — the user prompt
+- `trivia-questions.md` — 10 trivia questions with progressive hints and answers
 
 ---
 
