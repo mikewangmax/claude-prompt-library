@@ -7,6 +7,7 @@ Hands-on demos built from prompts in the [Anthropic Claude Prompt Library](https
 ```
 claude-prompt-library/
 ├── CosmicKeystrokes/       # Side-scrolling typing game (HTML)
+├── DreamInterpreter/       # Dream symbolism analysis
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
 ├── SqlSorcerer/            # Natural language to SQL query
@@ -24,6 +25,16 @@ A fully self-contained side-scrolling typing game in a single HTML file. The pla
 - `prompt.md` — the user prompt sent to Claude
 - [`typing-game.html`](CosmicKeystrokes/typing-game.html) — the generated game, open directly in a browser
 - **Live demo:** https://mikewangmax.github.io/claude-prompt-library/CosmicKeystrokes/typing-game.html
+
+---
+
+### DreamInterpreter
+
+Demonstrates Claude as a dream interpretation assistant. Given a dream about walking through a dark forest, encountering a white stag that transforms into a wise old man, and receiving a golden key, Claude provides a detailed symbol-by-symbol analysis drawing on Jungian archetypes, mythological traditions, and narrative structure — with reflective questions for the dreamer.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `interpretation.md` — the generated dream analysis
 
 ---
 
