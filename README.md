@@ -11,6 +11,9 @@ claude-prompt-library/
 ├── DreamInterpreter/       # Dream symbolism analysis
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
+├── HalTheHumorousHelper/   # Sarcastic yet helpful AI assistant
+├── LatexLegend/            # LaTeX table creation guide
+├── MoodColorizer/          # Mood-to-color converter (HTML)
 ├── PortmanteauPoet/        # Creative portmanteau word blending
 ├── PunDit/                 # Pun and wordplay generator
 ├── SqlSorcerer/            # Natural language to SQL query
@@ -61,6 +64,16 @@ Demonstrates Claude acting as an Excel formula expert. Given a sales data table 
 
 ---
 
+### HalTheHumorousHelper
+
+A sarcastic yet helpful cooking advice response from Hal, featuring tiered meal suggestions ranked by effort level with witty commentary throughout.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `hal-cooking-advice.md` — Hal's sarcastic cooking advice with tiered meal suggestions
+
+---
+
 ### GoogleAppsScriper
 
 A Google Apps Script that iterates over every slide and text element in a Google Slides presentation and translates all content to Korean using the `LanguageApp` service.
@@ -68,6 +81,27 @@ A Google Apps Script that iterates over every slide and text element in a Google
 **Files:**
 - `prompt.md` — the user prompt
 - `translateToKorean.gs` — the generated Apps Script (paste into Google Apps Script editor)
+
+---
+
+### LatexLegend
+
+A comprehensive LaTeX table creation guide with basic code, line-by-line explanations, five style variations (alignment, booktabs, colored headers, multi-column/multi-row), a compilable minimal working example, and a quick reference of common table commands.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `latex-table-guide.md` — the generated LaTeX table guide
+
+---
+
+### MoodColorizer
+
+Interactive mood-to-color converter using color psychology principles with keyword analysis, color harmonies, history tracking, and ambient visual feedback.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- [`mood-colorizer.html`](MoodColorizer/mood-colorizer.html) — interactive mood-to-color app, open directly in a browser
+- **Live demo:** https://mikewangmax.github.io/claude-prompt-library/MoodColorizer/mood-colorizer.html
 
 ---
 
