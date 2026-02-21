@@ -9,6 +9,8 @@ claude-prompt-library/
 ├── CosmicKeystrokes/       # Side-scrolling typing game (HTML)
 ├── AdaptiveEditor/         # Style-adapted text rewriting
 ├── AirportCodeAnalyst/     # IATA airport code extraction
+├── AlienAnthropologist/    # Alien field report on human behavior
+├── AlliterationAlchemist/  # Alliterative phrase generation
 ├── CodeConsultant/         # Python performance optimization analysis
 ├── CsvConverter/            # JSON to CSV data conversion
 ├── CulinaryCreator/        # Personalized gluten-free recipe ideas
@@ -50,6 +52,26 @@ A pirate-style rewrite of a paragraph about Carl Linnaeus and his binomial nomen
 **Files:**
 - `prompt.md` — the user prompt
 - `output.md` — pirate-style rewrite of a scientific paragraph
+
+---
+
+### AlienAnthropologist
+
+An alien anthropologist's detailed field report analyzing human social interactions and relationships, covering bonding types, communication systems, rituals, conflict patterns, and evolutionary hypotheses.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — alien field report on human social behavior
+
+---
+
+### AlliterationAlchemist
+
+Twenty alliterative phrases and sentences evoking ocean imagery, marine life, and coastal landscapes.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — alliterative ocean-themed phrases
 
 ---
 
