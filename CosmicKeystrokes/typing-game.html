@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Sprint - Type to Win!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8); }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        body {
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-6xl">
+        <!-- Score Display -->
+        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-2xl px-6 py-3 shadow-2xl z-50">
+            <div class="text-sm text-gray-600 font-semibold">SCORE</div>
+            <div id="score" class="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">0</div>
+        </div>
+
+        <!-- Instructions -->
+        <div id="instructions" class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-2xl px-6 py-3 shadow-2xl z-50">
+            <div class="text-sm font-semibold text-gray-700">
+                <div class="mb-1">🎮 WASD to move</div>
+                <div>⌨️ Type words to score!</div>
+            </div>
+        </div>
+
+        <!-- Game Container -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden">
+            <div id="gameWorld" class="relative h-[600px] bg-gradient-to-b from-sky-200 via-sky-100 to-green-100 overflow-hidden">
+                <!-- Ground -->
+                <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-green-600 to-green-400"></div>
+                <div class="absolute bottom-24 left-0 right-0 h-2 bg-green-700"></div>
+
+                <!-- Player -->
+                <div id="player" class="absolute w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full shadow-lg transition-all duration-100 flex items-center justify-center text-2xl pulse-glow" style="left: 100px; bottom: 120px;">
+                    🚀
+                </div>
+
+                <!-- Words will be spawned here -->
+                <div id="wordContainer"></div>
+
+                <!-- Typing Modal -->
+                <div id="typingModal" class="hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl shadow-2xl p-8 z-40 min-w-[400px]">
+                    <div class="text-center">
+                        <div class="text-sm text-gray-500 mb-2">TYPE THIS WORD:</div>
+                        <div id="targetWord" class="text-4xl font-bold text-purple-600 mb-6"></div>
+                        <input
+                            id="typingInput"
+                            type="text"
+                            class="w-full px-6 py-4 text-2xl text-center border-4 border-purple-300 rounded-2xl focus:outline-none focus:border-purple-500 transition-colors"
+                            placeholder="Start typing..."
+                            autocomplete="off"
+                        >
+                        <div class="mt-4 text-sm text-gray-500">
+                            Time: <span id="typingTimer" class="font-bold text-purple-600">0.0</span>s
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overlay when typing -->
+                <div id="overlay" class="hidden absolute inset-0 bg-black/30 backdrop-blur-sm z-30"></div>
+            </div>
+        </div>
+
+        <!-- Game Over / Start Screen -->
+        <div id="startScreen" class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-600 to-blue-600 z-50">
+            <div class="text-center text-white">
+                <h1 class="text-6xl font-bold mb-4 float-animation">Word Sprint 🚀</h1>
+                <p class="text-2xl mb-8">Type fast, score big!</p>
+                <button onclick="startGame()" class="bg-white text-purple-600 px-12 py-4 rounded-full text-2xl font-bold hover:scale-110 transform transition-all shadow-2xl">
+                    START GAME
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Game State
+        let score = 0;
+        let playerX = 100;
+        let playerY = 120;
+        let words = [];
+        let gameRunning = false;
+        let typingMode = false;
+        let currentWord = null;
+        let typingStartTime = 0;
+        let typingTimerInterval = null;
+        let keys = {};
+
+        // Word Pool - highly variable and interesting words
+        const wordPool = [
+            // Short words
+            'cat', 'dog', 'sun', 'moon', 'star', 'fire', 'wind', 'wave', 'tree', 'leaf',
+            // Medium words
+            'rocket', 'planet', 'cosmic', 'nebula', 'galaxy', 'meteor', 'comet', 'orbit',
+            'dragon', 'wizard', 'castle', 'knight', 'magic', 'potion', 'crystal', 'phoenix',
+            'thunder', 'lightning', 'rainbow', 'mountain', 'ocean', 'forest', 'desert', 'jungle',
+            // Longer words
+            'adventure', 'explorer', 'discovery', 'treasure', 'mystery', 'enigma', 'paradox',
+            'symphony', 'harmony', 'melody', 'rhythm', 'crescendo', 'virtuoso', 'maestro',
+            'butterfly', 'dragonfly', 'firefly', 'ladybug', 'caterpillar', 'grasshopper',
+            'telescope', 'microscope', 'kaleidoscope', 'periscope', 'stethoscope',
+            // Complex words
+            'magnificent', 'spectacular', 'extraordinary', 'phenomenal', 'incredible',
+            'serendipity', 'ephemeral', 'luminescent', 'iridescent', 'effervescent',
+            'constellation', 'supernova', 'aurora', 'eclipse', 'equinox', 'solstice',
+            'metamorphosis', 'photosynthesis', 'bioluminescence', 'crystallization',
+            'championship', 'acceleration', 'celebration', 'imagination', 'determination'
+        ];
+
+        // DOM Elements
+        const player = document.getElementById('player');
+        const wordContainer = document.getElementById('wordContainer');
+        const scoreDisplay = document.getElementById('score');
+        const typingModal = document.getElementById('typingModal');
+        const typingInput = document.getElementById('typingInput');
+        const targetWord = document.getElementById('targetWord');
+        const overlay = document.getElementById('overlay');
+        const startScreen = document.getElementById('startScreen');
+        const typingTimer = document.getElementById('typingTimer');
+
+        // Start Game
+        function startGame() {
+            startScreen.style.display = 'none';
+            gameRunning = true;
+            score = 0;
+            updateScore();
+            spawnWord();
+            gameLoop();
+        }
+
+        // Spawn Word
+        function spawnWord() {
+            if (!gameRunning) return;
+
+            const word = wordPool[Math.floor(Math.random() * wordPool.length)];
+            const wordElement = document.createElement('div');
+            const randomY = Math.random() * 400 + 50; // Random height
+            const randomX = window.innerWidth - 100; // Spawn off-screen right
+
+            wordElement.className = 'absolute bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-2xl font-bold text-xl shadow-lg float-animation cursor-pointer hover:scale-110 transform transition-all';
+            wordElement.textContent = word;
+            wordElement.style.left = randomX + 'px';
+            wordElement.style.top = randomY + 'px';
+            wordElement.dataset.word = word;
+            wordElement.dataset.x = randomX;
+
+            wordContainer.appendChild(wordElement);
+            words.push({
+                element: wordElement,
+                word: word,
+                x: randomX,
+                y: randomY
+            });
+
+            // Spawn next word after random interval
+            setTimeout(spawnWord, Math.random() * 3000 + 2000);
+        }
+
+        // Update Score
+        function updateScore() {
+            scoreDisplay.textContent = score;
+        }
+
+        // Keyboard Input
+        document.addEventListener('keydown', (e) => {
+            if (!typingMode) {
+                keys[e.key.toLowerCase()] = true;
+            }
+        });
+
+        document.addEventListener('keyup', (e) => {
+            keys[e.key.toLowerCase()] = false;
+        });
+
+        // Movement
+        function updatePlayerPosition() {
+            if (typingMode) return;
+
+            const speed = 5;
+
+            if (keys['w']) playerY = Math.min(playerY + speed, 500);
+            if (keys['s']) playerY = Math.max(playerY - speed, 0);
+            if (keys['a']) playerX = Math.max(playerX - speed, 0);
+            if (keys['d']) playerX = Math.min(playerX + speed, window.innerWidth - 100);
+
+            player.style.left = playerX + 'px';
+            player.style.bottom = playerY + 'px';
+        }
+
+        // Collision Detection
+        function checkCollisions() {
+            if (typingMode) return;
+
+            const playerRect = player.getBoundingClientRect();
+
+            words.forEach((wordObj, index) => {
+                const wordRect = wordObj.element.getBoundingClientRect();
+
+                if (
+                    playerRect.left < wordRect.right &&
+                    playerRect.right > wordRect.left &&
+                    playerRect.top < wordRect.bottom &&
+                    playerRect.bottom > wordRect.top
+                ) {
+                    // Collision detected!
+                    startTypingMode(wordObj, index);
+                }
+            });
+        }
+
+        // Start Typing Mode
+        function startTypingMode(wordObj, index) {
+            typingMode = true;
+            currentWord = wordObj;
+            currentWordIndex = index;
+
+            typingModal.classList.remove('hidden');
+            overlay.classList.remove('hidden');
+            targetWord.textContent = wordObj.word;
+            typingInput.value = '';
+            typingInput.focus();
+
+            // Start timer
+            typingStartTime = Date.now();
+            typingTimerInterval = setInterval(updateTypingTimer, 50);
+        }
+
+        // Update Typing Timer
+        function updateTypingTimer() {
+            const elapsed = (Date.now() - typingStartTime) / 1000;
+            typingTimer.textContent = elapsed.toFixed(1);
+        }
+
+        // Typing Input Handler
+        typingInput.addEventListener('input', (e) => {
+            const typed = e.target.value;
+            const target = currentWord.word;
+
+            if (typed === target) {
+                // Correct!
+                const timeTaken = (Date.now() - typingStartTime) / 1000;
+                const points = calculatePoints(target.length, timeTaken);
+                score += points;
+                updateScore();
+
+                // Remove word
+                currentWord.element.remove();
+                words.splice(currentWordIndex, 1);
+
+                // Exit typing mode
+                exitTypingMode();
+
+                // Show points earned (optional visual feedback)
+                showPointsEarned(points);
+            }
+        });
+
+        // Calculate Points based on word length and speed
+        function calculatePoints(wordLength, timeTaken) {
+            const basePoints = wordLength * 10;
+            const speedBonus = Math.max(0, 100 - (timeTaken * 20));
+            return Math.round(basePoints + speedBonus);
+        }
+
+        // Exit Typing Mode
+        function exitTypingMode() {
+            typingMode = false;
+            currentWord = null;
+            typingModal.classList.add('hidden');
+            overlay.classList.add('hidden');
+            clearInterval(typingTimerInterval);
+        }
+
+        // Show Points Earned (visual feedback)
+        function showPointsEarned(points) {
+            const feedback = document.createElement('div');
+            feedback.className = 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-yellow-400 z-50 pointer-events-none';
+            feedback.textContent = '+' + points;
+            feedback.style.textShadow = '0 0 20px rgba(255, 215, 0, 0.8)';
+            document.body.appendChild(feedback);
+
+            setTimeout(() => {
+                feedback.style.transition = 'all 1s ease-out';
+                feedback.style.transform = 'translate(-50%, -200%) scale(2)';
+                feedback.style.opacity = '0';
+            }, 100);
+
+            setTimeout(() => feedback.remove(), 1100);
+        }
+
+        // Move words slowly to the left (parallax effect)
+        function moveWords() {
+            words.forEach((wordObj) => {
+                wordObj.x -= 0.5;
+                wordObj.element.style.left = wordObj.x + 'px';
+
+                // Remove if off-screen
+                if (wordObj.x < -200) {
+                    wordObj.element.remove();
+                    words.splice(words.indexOf(wordObj), 1);
+                }
+            });
+        }
+
+        // Game Loop
+        function gameLoop() {
+            if (!gameRunning) return;
+
+            updatePlayerPosition();
+            checkCollisions();
+            moveWords();
+
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Allow ESC to exit typing mode
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && typingMode) {
+                exitTypingMode();
+            }
+        });
+    </script>
+</body>
+</html>
