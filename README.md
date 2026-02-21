@@ -20,7 +20,7 @@ A fully self-contained side-scrolling typing game in a single HTML file. The pla
 
 **Files:**
 - `prompt.md` — the user prompt sent to Claude
-- `typing-game.html` — the generated game, open directly in a browser
+- [`typing-game.html`](CosmicKeystrokes/typing-game.html) — the generated game, open directly in a browser
 
 ---
 
@@ -50,7 +50,7 @@ A one-page website for a fictional online learning platform called **EduQuest**,
 
 **Files:**
 - `prompt.md` — the system + user prompt
-- `eduquest.html` — the generated website, open directly in a browser
+- [`eduquest.html`](WebsiteWizard/eduquest.html) — the generated website, open directly in a browser
 
 ## How to Use
 
