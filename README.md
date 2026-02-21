@@ -432,6 +432,16 @@ Interactive mood-to-color converter using color psychology principles with keywo
 
 ---
 
+### MotivationalMuse
+
+A personalized motivational message encouraging a struggling novelist to overcome procrastination and self-doubt, with practical advice, analogies, and literary quotes.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — personalized motivational message for a novelist
+
+---
+
 ### NeologismCreator
 
 A creative neologism "cognoscamoflage" with full definition, etymology, related forms, usage examples, and synonyms for the act of pretending to understand something to avoid looking uninformed.
@@ -452,6 +462,16 @@ A comprehensive pros-and-cons analysis of implementing a four-day workweek as a 
 
 ---
 
+### PhilosophicalMusings
+
+A philosophical discussion of the trolley problem exploring utilitarianism, deontology, real-world parallels, and open-ended questions for reflection.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — philosophical exploration of the trolley problem
+
+---
+
 ### PiiPurifier
 
 A redacted version of a conversation where all personally identifiable information (names and address) has been replaced with XXX.
@@ -462,6 +482,16 @@ A redacted version of a conversation where all personally identifiable informati
 
 ---
 
+### PolyglotSuperpowers
+
+Translates a German sentence about beautiful weather into Italian, preserving meaning and tone.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — German to Italian translation
+
+---
+
 ### PortmanteauPoet
 
 Demonstrates Claude as a creative portmanteau generator. Given the words "music" and "therapy," Claude produces a curated collection of innovative word blends — from "Musitherapy" to "Rhythmedy" — each with pronunciation guides, etymological breakdowns, and context suggestions for when to use them.
@@ -469,6 +499,16 @@ Demonstrates Claude as a creative portmanteau generator. Given the words "music"
 **Files:**
 - `prompt.md` — the system + user prompt
 - `portmanteaus.md` — the generated portmanteau options
+
+---
+
+### ProductNamingPro
+
+Ten creative and marketable product name suggestions for noise-canceling wireless headphones, each with a brief rationale.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `output.md` — 10 product name suggestions with rationales
 
 ---
 
