@@ -7,6 +7,7 @@ Hands-on demos built from prompts in the [Anthropic Claude Prompt Library](https
 ```
 claude-prompt-library/
 ├── CosmicKeystrokes/       # Side-scrolling typing game (HTML)
+├── CodeConsultant/         # Python performance optimization analysis
 ├── CulinaryCreator/        # Personalized gluten-free recipe ideas
 ├── DreamInterpreter/       # Dream symbolism analysis
 ├── EthicalDilemmaNavigator/ # Multi-framework ethical dilemma analysis
@@ -25,6 +26,16 @@ claude-prompt-library/
 ```
 
 ## Demos
+
+### CodeConsultant
+
+Performance analysis of a Python Fibonacci function with five optimization strategies ranging from pre-allocation to O(log n) matrix exponentiation.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `fibonacci-optimization.md` — five Fibonacci optimization strategies with comparison table
+
+---
 
 ### CosmicKeystrokes
 
