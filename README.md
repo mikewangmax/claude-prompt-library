@@ -18,6 +18,7 @@ claude-prompt-library/
 ├── HalTheHumorousHelper/   # Sarcastic yet helpful AI assistant
 ├── IdiomIlluminator/       # Idiom meaning and origin explanation
 ├── LatexLegend/            # LaTeX table creation guide
+├── MeetingScribe/          # Meeting notes to structured summary
 ├── MoodColorizer/          # Mood-to-color converter (HTML)
 ├── PortmanteauPoet/        # Creative portmanteau word blending
 ├── PunDit/                 # Pun and wordplay generator
@@ -147,6 +148,16 @@ A comprehensive LaTeX table creation guide with basic code, line-by-line explana
 **Files:**
 - `prompt.md` — the system + user prompt
 - `latex-table-guide.md` — the generated LaTeX table guide
+
+---
+
+### MeetingScribe
+
+A concise, professionally formatted meeting summary distilling notes from a Verona reconciliation meeting into key takeaways, action items by responsible party, and next steps.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `meeting-summary.md` — structured meeting summary with action items and next steps
 
 ---
 
