@@ -20,6 +20,7 @@ claude-prompt-library/
 ├── LatexLegend/            # LaTeX table creation guide
 ├── MeetingScribe/          # Meeting notes to structured summary
 ├── MoodColorizer/          # Mood-to-color converter (HTML)
+├── NeologismCreator/       # Creative neologism invention
 ├── PortmanteauPoet/        # Creative portmanteau word blending
 ├── PunDit/                 # Pun and wordplay generator
 ├── SimileSavant/           # Creative similes for joyful laughter
@@ -169,6 +170,16 @@ Interactive mood-to-color converter using color psychology principles with keywo
 - `prompt.md` — the system + user prompt
 - [`mood-colorizer.html`](MoodColorizer/mood-colorizer.html) — interactive mood-to-color app, open directly in a browser
 - **Live demo:** https://mikewangmax.github.io/claude-prompt-library/MoodColorizer/mood-colorizer.html
+
+---
+
+### NeologismCreator
+
+A creative neologism "cognoscamoflage" with full definition, etymology, related forms, usage examples, and synonyms for the act of pretending to understand something to avoid looking uninformed.
+
+**Files:**
+- `prompt.md` — the user prompt
+- `neologism-output.md` — invented word with definition, etymology, and usage examples
 
 ---
 
