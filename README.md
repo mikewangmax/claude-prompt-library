@@ -9,6 +9,7 @@ claude-prompt-library/
 ├── CosmicKeystrokes/       # Side-scrolling typing game (HTML)
 ├── ExcelFormulaExpert/     # Advanced Excel formula generation
 ├── GoogleAppsScriper/      # Google Slides translation via Apps Script
+├── SqlSorcerer/            # Natural language to SQL query
 ├── StorytellingSidekick/   # Collaborative storytelling with plot twists
 └── WebsiteWizard/          # One-page website generator (HTML)
 ```
@@ -43,6 +44,16 @@ A Google Apps Script that iterates over every slide and text element in a Google
 **Files:**
 - `prompt.md` — the user prompt
 - `translateToKorean.gs` — the generated Apps Script (paste into Google Apps Script editor)
+
+---
+
+### SqlSorcerer
+
+Demonstrates Claude transforming a natural language request into a valid SQL query. Given a multi-table e-commerce database schema (Customers, Products, Orders, Order_Items, Reviews, Employees), Claude generates a query to find customers who have placed orders but never left a review, along with their total spend — complete with a step-by-step explanation of each clause.
+
+**Files:**
+- `prompt.md` — the system + user prompt
+- `query.md` — the generated SQL query and explanation
 
 ---
 
