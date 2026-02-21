@@ -25,6 +25,7 @@ claude-prompt-library/
 ├── MindfulnessMentor/      # Guided mindfulness meditation
 ├── MoodColorizer/          # Mood-to-color converter (HTML)
 ├── NeologismCreator/       # Creative neologism invention
+├── PerspectivesPonderer/   # Multi-perspective analysis
 ├── PortmanteauPoet/        # Creative portmanteau word blending
 ├── PunDit/                 # Pun and wordplay generator
 ├── SimileSavant/           # Creative similes for joyful laughter
@@ -224,6 +225,16 @@ A creative neologism "cognoscamoflage" with full definition, etymology, related 
 **Files:**
 - `prompt.md` — the user prompt
 - `neologism-output.md` — invented word with definition, etymology, and usage examples
+
+---
+
+### PerspectivesPonderer
+
+A comprehensive pros-and-cons analysis of implementing a four-day workweek as a standard corporate practice, covering productivity, well-being, costs, equity, and regulatory considerations.
+
+**Files:**
+- `prompt.md` — the user prompt
+- `four-day-workweek-analysis.md` — multi-perspective analysis of the four-day workweek
 
 ---
 
